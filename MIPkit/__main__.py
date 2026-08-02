@@ -21,7 +21,7 @@ from MIPkit.visualize.polyanimation import polyanimation
 import time
 
 def splash():
-    return "\n=====================================================================\n\tBMBT MIPkit v2025.09\n\tDOI:\n\tBarrett et al.\n\n\tIssues? : tbar@tf.uni-kiel.de\n=====================================================================\n"
+    return "\n=====================================================================\n\tBMBT MIPkit v2026.7\n\tDOI:\n\tBarrett et al.\n\n\tIssues? : tbar@tf.uni-kiel.de\n=====================================================================\n"
 
 
 def main():
