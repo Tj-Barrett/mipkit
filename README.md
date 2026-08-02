@@ -1,9 +1,9 @@
-# MIPkit : Automated Screening, Docking, Precomplexation, and Complexation for Molecularly Imprinted Polymers
-This package provides automated tools for the screening and docking of functional monomers on epitopes and proteins. The entire functional monomer library can be found in <B> MIPkit/constants/fm-list.yaml </B>, or below. If you want to add any, make sure you fill out the tables completely, i.e. the functional monomer acronym, any equivalents you might use by mistake, smiles codes, etc.<br><br>
+# MIPkit: Automated Screening, Docking, Precomplexation, and Complexation for Molecularly Imprinted Polymers
+This package provides automated tools for screening and docking functional monomers onto epitopes and proteins. The entire functional monomer library can be found in <B> MIPkit/constants/fm-list.yaml </B>, or below. If you want to add any, make sure you fill out the tables completely, i.e., the functional monomer acronym, any equivalents you might use by mistake, SMILES codes, etc.<br><br>
 <p align="center">
 <img src="MIPkit/assets/MIPkit.png" height="400"/>
 </p >
-Beyond docking, this code can generate precomplexes about a target epitope. <B> -dock</B> applies recursive docking to a target, building out a thoeretical precomplexation structure. Recipe order is randomized (or applied with a seed for repeatability), so calling the function several times should give a range of starting configurations to analyze. The precomplexes can then be polymerized using <B> -react</B>. Complexation can be done with or without a template present, to generate relevant <B>MIP</B> and <B>NIP</B> structures for rebinding and cross-reactivity simulations. 
+Beyond docking, this code can generate precomplexes about a target epitope. <B> -dock</B> applies recursive docking to a target, building out a theoretical precomplexation structure. Recipe order is randomized (or applied with a seed for repeatability), so calling the function several times should give a range of starting configurations to analyze. The precomplexes can then be polymerized using <B> -react</B>. Complexation can be done with or without a template present, to generate relevant <B>MIP</B> and <B>NIP</B> structures for rebinding and cross-reactivity simulations. 
 
 ### Citation
 
@@ -30,14 +30,14 @@ If you use this package or any of its constituents, please use the following cit
 * Pandas
 * networkx
 
-### Seperately Installed Optional Dependencies
+### Separately Installed Optional Dependencies
 * Autodock Vina
 * GNINA
 * Openbabel
 * Ambertools
 * GROMACS
 
-MIPkit's main functionality requires all optional dependencies to be installed, however if you only want to use Python based applications (visualization, recipe price estimation, etc.), MIPkit will function without them.
+MIPkit's main functionality requires all optional dependencies to be installed; however, if you only want to use Python-based applications (visualization, recipe price estimation, etc.), MIPkit will function without them.
 
 Once these are installed, update config.yaml and activate_XXX_venv.sh.
 
@@ -51,7 +51,7 @@ Once these are installed, update config.yaml and activate_XXX_venv.sh.
     # Screen using Gromacs
     MIPkit -gmxscreen -protein Example_protein.pdb -fms AAC BIS DMAA NIPAM ....
 
-MIPkit automates the screening process, either through simple dockings or a molecular dynamics interaction. <b> -gmxscreen </b> will dock and simulate a single functional monomer (or list of monomers) against a given template, allowing high throughput screening of FMs with only a single line of code. For comparison, it exports RDFs, LJ and Coulombic interactions, and H-Bond counts.
+MIPkit automates the screening process, either through simple docking or molecular dynamics interactions. <b> -gmxscreen </b> will dock and simulate a single functional monomer (or list of monomers) against a given template, allowing high-throughput screening of FMs with only a single line of code. For comparison, it exports RDFs, LJ and Coulombic interactions, and H-Bond counts.
 
 ### Recursive Docking
 
@@ -61,9 +61,9 @@ MIPkit automates the screening process, either through simple dockings or a mole
     # From a config
     MIPkit -dock -protein CD20-epitope.pdb -config cd20_complex.yaml
 
-MIPkit will recursively dock MIP recipes to generate precomplexes that can be polymerized into MIPs and NIPs. <b> -dockmethod </b> can be used to switch between GNINA and VINA.
+MIPkit will recursively dock MIP recipes to generate precomplexes that can be polymerized into MIPs and NIPs. <b>-dockmethod</b> can be used to switch between GNINA and VINA.
 
-### Algorithm Based Polymerization
+### Algorithm-Based Polymerization
 
     # MIP
     MIPkit -react -protein CD20-epitope.pdb -complex CD20-shuffle.pdb -cutoff 3.3 -gmxt short
@@ -71,7 +71,7 @@ MIPkit will recursively dock MIP recipes to generate precomplexes that can be po
     # NIP
     MIPkit -react -complex CD20-shuffle.pdb -cutoff 3.3 -gmxt short
 
-MIPkit contains a novel RDkit based algorithm to determine and apply new bonds. This permits the polymerization of an unprecendented variety of monomers, with the current FM library containing 98 FMs and crosslinkers. For implicit simulations, a bonding cutoff and probability determines polymerization events, while for explicit simulations, bonding and initiation cutoffs are used to apply bonding eligibility.  
+MIPkit contains a novel RDkit-based algorithm to determine and apply new bonds. This permits the polymerization of an unprecedented variety of monomers, with the current FM library containing 98 FMs and crosslinkers. For implicit simulations, a bonding cutoff and probability determine polymerization events, while for explicit simulations, bonding and initiation cutoffs are used to apply bonding eligibility.  
 
 ### Interaction
     # MIP complex Interaction (with excess FMs)
@@ -80,7 +80,7 @@ MIPkit contains a novel RDkit based algorithm to determine and apply new bonds. 
     # MIP Interaction (no loose FMs)
     MIPkit -react -cplx CD20-MIP.pdb -protein CD20-epitope-done.pdb -wash -id -config cd20_complex.yaml 
 
-MIPkit will also run interactions between the polymerized structures and templates. To get a proper MIP structure, <b> -wash</b> should be applied to remove any unreacted FMs. <b> -id </b> is used in conjunction with the recipe outlined in the config yaml to decompose polymers into their constituent FMs to determine the per species contributions of energies and H-Bond interactions.
+MIPkit will also run interactions between the polymerized structures and templates. To get a proper MIP structure, <b> -wash</b> should be applied to remove any unreacted FMs. <b> -id </b> is used in conjunction with the recipe outlined in the config yaml to decompose polymers into their constituent FMs to determine the per-species contributions of energies and H-Bond interactions.
 
 ### Price Estimation
 
@@ -93,9 +93,9 @@ The code allows for self-interaction of the polymer chains, permitting the forma
 
 ### Example Workflow
 
-Please follow the following links to the quickstart section of the documentation : 
-* [Caffeine](https://tjbarrett.org/mipkit-documentation/quickstart/caffeine/) 
-* [CD20](https://tjbarrett.org/mipkit-documentation/quickstart/cd20/)
+Please follow the links below to the quickstart section of the documentation : 
+* [Caffeine](https://tjbarrett.dev/mipkit-documentation/quickstart/caffeine/) 
+* [CD20](https://tjbarrett.dev/mipkit-documentation/quickstart/cd20/)
 
 ## Functional Monomer Library
 
@@ -216,9 +216,9 @@ Please follow the following links to the quickstart section of the documentation
 ##
 
 ### To Do :
-This list will be developed as features and bugs are submitted. If you have bugs, please open an issue. If you have suggestion, please open a discussion.
+This list will be developed as features and bugs are submitted. If you have bugs, please open an issue. If you have suggestions, please open a discussion.
 
 Current To Do List:
-* RDkit based topology generation
-* Refactor from pseudo-functional to object oriented
+* RDkit-based topology generation
+* Refactor from pseudo-functional to object-oriented
 * Electropolymerization 
