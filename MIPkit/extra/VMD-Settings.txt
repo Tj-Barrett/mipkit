@@ -1,0 +1,5 @@
+
+# Protein
+resname ALA or resname ASP or resname GLU or resname GLY or resname LYS or resname PRO or resname SER or resname VAL 
+# Complex
+not resname ALA and not resname ASP and not resname GLU and not resname GLY and not resname LYS and not resname PRO and not resname SER and not resname VAL 

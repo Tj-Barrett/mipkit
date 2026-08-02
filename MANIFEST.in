@@ -1,0 +1,29 @@
+# MANIFEST.in for MIPkit
+# Include additional files in the distribution
+
+# Include documentation
+include README.md
+include LICENSE
+
+# Include configuration files
+include pyproject.toml
+include pytest.ini
+include requirements-dev.txt
+
+# Include test suite
+recursive-include tests *.py
+recursive-include tests *.md
+
+# Include data files
+recursive-include MIPkit/constants *.yaml
+recursive-include MIPkit/gmx *.mdp
+recursive-include MIPkit/initiators *.yaml
+recursive-include MIPkit/solvents *.pdb *.top *.itp
+
+# Exclude unnecessary files
+global-exclude __pycache__
+global-exclude *.py[cod]
+global-exclude *.so
+global-exclude .DS_Store
+global-exclude *.swp
+global-exclude .gitignore

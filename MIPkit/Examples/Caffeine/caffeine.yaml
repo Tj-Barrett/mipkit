@@ -1,0 +1,17 @@
+center:
+- -0.034
+- 0.006
+- -0.105
+energy_range: 4
+exhaustiveness: 20
+fms:
+- MAA
+- 4
+- EGDMA
+- 6
+protein: caffeine.pdb
+scale: 1
+size:
+- 40
+- 50
+- 24

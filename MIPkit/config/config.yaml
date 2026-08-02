@@ -1,0 +1,18 @@
+#
+# Configuration file for necessary applications. Place path to binary (or command) here.
+#
+# ambertools: see activate_vina_venv.sh 
+#
+# these should only change if there is a conflict, i.e. such as one for openbabel
+# with Chimera installed
+
+# If you want to make a permanent default, uncomment docking-method
+# docking-method: vina
+vina: /home/tj/Documents/autodock/bin/vina
+gnina: gnina
+
+gmx: gmx
+obabel: obabel
+acpype: acpype
+
+

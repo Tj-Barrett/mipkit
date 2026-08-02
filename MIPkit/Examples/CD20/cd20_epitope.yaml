@@ -1,0 +1,24 @@
+protein: CD20-epitope.pdb
+fms:
+  - AMPSA
+  - 4
+  - BAAPY 
+  - 1
+  - NIPAM 
+  - 15
+  - BIS 
+  - 5
+scale:
+  - 1
+center:
+  - 146.284
+  - 157.686
+  - 146.331
+size:
+  - 20
+  - 31
+  - 27
+energy_range:
+  - 4
+exhaustiveness:
+  - 100

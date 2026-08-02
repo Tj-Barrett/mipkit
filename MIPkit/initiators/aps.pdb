@@ -1,0 +1,8 @@
+HETATM    1  O   APS     1      -1.015   1.210  -0.051  1.00  0.00           O  
+HETATM    2  S   APS     1      -1.099   0.162   1.014  1.00  0.00           S  
+HETATM    3  O   APS     1      -1.997   0.634   2.111  1.00  0.00           O  
+HETATM    4  O   APS     1       0.479  -0.097   1.556  1.00  0.00           O  
+HETATM    5  O   APS     1      -1.674  -1.298   0.452  1.00  0.00           O  
+CONECT    1    2    2
+CONECT    2    3    3    4    5
+END

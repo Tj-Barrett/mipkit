@@ -1,0 +1,2 @@
+MIPkit -react -template caffeine.pdb -complex example_complex.pdb -time 0.5 -min -box 5 5 5 -ncpu 8 -gpu_id 0
+

@@ -1,0 +1,27 @@
+# Development dependencies for MIPkit
+
+# Testing
+pytest>=7.0.0
+pytest-cov>=4.0.0
+pytest-mock>=3.10.0
+pytest-xdist>=3.0.0  # For parallel test execution
+pytest-timeout>=2.1.0  # Timeout support
+
+# Code quality
+black>=23.0.0  # Code formatting
+flake8>=6.0.0  # Linting
+mypy>=1.0.0  # Type checking
+pylint>=2.17.0  # Additional linting
+isort>=5.12.0  # Import sorting
+
+# Coverage
+coverage[toml]>=7.0.0
+coverage-badge>=1.1.0
+
+# Documentation
+sphinx>=6.0.0
+sphinx-rtd-theme>=1.2.0
+
+# Development tools
+ipython>=8.0.0
+ipdb>=0.13.0  # Debugging
